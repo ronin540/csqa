@@ -1,11 +1,9 @@
 <?php
-
-  if(isset($_SESSION['userId'])){
-    header('location: index.php');
-  }
-
+session_start();
+if(isset($_SESSION['userId'])){
+  header('location: index.php');
+}
 include "includes/baseTop.php";
-
 ?>
 
 
@@ -14,11 +12,11 @@ include "includes/baseTop.php";
   <p class="text-secondary">If you have not created an account yet, then please
 <a href="signup.php">sign up</a> first.</p>
   <form class="login" method="POST" action="phpScripts/signinUser.php">
-    <input
+    <!-- <input
       type="hidden"
       name="csrfmiddlewaretoken"
       value="OoZmtNQbJFPQWniGSetTPqyfar9h3gtoSG5ODMzIW3PZVphrlxwyoMysmBhSmrnh"
-    />
+    /> -->
     <p>
       <label for="id_login">Username:</label>
       <input
@@ -29,6 +27,8 @@ include "includes/baseTop.php";
         maxlength="150"
         required=""
         id="id_login"
+  
+  
       />
     </p>
     <p>
@@ -39,6 +39,7 @@ include "includes/baseTop.php";
         placeholder="Password"
         required=""
         id="id_password"
+        
       />
     </p>
     <p>

@@ -8,7 +8,7 @@
             <a href="index.php" class="text-secondary">Home</a> | 
       
             <?php
-                if(isset($_SESSION['userId'])){
+          if(isset($_SESSION['userId'])){
                   echo '<a href="logout.php" class="text-secondary">Log out (' . $_SESSION["username"] .') </a> |' ;
                 }
                 else {

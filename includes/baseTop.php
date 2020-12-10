@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +43,7 @@ session_start();
                         <a href="" class="text-dark">My Answers</a> |';
                       }
                       ?>
-                        <a href="" class="text-dark" style="display: inline-block">
+                        <a href="newQuestion.php" class="text-dark" style="display: inline-block">
                             New Question
                         </a>
                     </span>

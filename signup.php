@@ -1,10 +1,10 @@
 <?php
-
- if(isset($_SESSION['userId'])){
-   header('location: index.php');
- }
+session_start();
+if(isset($_SESSION['userId'])){
+  echo "sessionId INcluded";
+  header('location: index.php');
+}
 include "includes/baseTop.php";
-
 ?>
 
 <div id="signup">
